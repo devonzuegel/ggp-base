@@ -1,0 +1,66 @@
+LOG 1397435994666 [L0]: [Received at 1397435994666] ( START kiosk.ticTacToe-1397435994636 oplayer (( role xplayer ) ( role oplayer ) ( index 1 ) ( index 2 ) ( index 3 ) ( <= ( base ( cell ?x ?y b ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y x ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y o ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( control ?p ) ) ( role ?p ) ) ( <= ( input ?p ( mark ?x ?y ) ) ( index ?x ) ( index ?y ) ( role ?p ) ) ( <= ( input ?p noop ) ( role ?p ) ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1397435994666 [L0]: [Received at 1397435994666] ( START kiosk.ticTacToe-1397435994636 xplayer (( role xplayer ) ( role oplayer ) ( index 1 ) ( index 2 ) ( index 3 ) ( <= ( base ( cell ?x ?y b ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y x ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y o ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( control ?p ) ) ( role ?p ) ) ( <= ( input ?p ( mark ?x ?y ) ) ( index ?x ) ( index ?y ) ( role ?p ) ) ( <= ( input ?p noop ) ( role ?p ) ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1397435994673 [L9]: <ERR> Got start message while already busy playing a game: ignoring.
+LOG 1397435994673 [L9]: <ERR> Got start message while already busy playing a game: ignoring.
+LOG 1397435994682 [L0]: [Sent at 1397435994682] busy
+LOG 1397435994685 [L0]: [Sent at 1397435994685] busy
+LOG 1397435994691 [L0]: [Received at 1397435994691] ( PLAY kiosk.ticTacToe-1397435994636 NIL )
+LOG 1397435994691 [L0]: [Received at 1397435994691] ( PLAY kiosk.ticTacToe-1397435994636 NIL )
+LOG 1397435994696 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994696 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994705 [L0]: [Sent at 1397435994705] busy
+LOG 1397435994705 [L0]: [Sent at 1397435994705] busy
+LOG 1397435994711 [L0]: [Received at 1397435994711] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 2 3 ) noop ) )
+LOG 1397435994712 [L0]: [Received at 1397435994711] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 2 3 ) noop ) )
+LOG 1397435994717 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994717 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994727 [L0]: [Sent at 1397435994727] busy
+LOG 1397435994728 [L0]: [Sent at 1397435994728] busy
+LOG 1397435994733 [L0]: [Received at 1397435994733] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 3 1 ) ) )
+LOG 1397435994734 [L0]: [Received at 1397435994734] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 3 1 ) ) )
+LOG 1397435994738 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994739 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994748 [L0]: [Sent at 1397435994748] busy
+LOG 1397435994747 [L0]: [Sent at 1397435994747] busy
+LOG 1397435994753 [L0]: [Received at 1397435994753] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 1 1 ) noop ) )
+LOG 1397435994753 [L0]: [Received at 1397435994753] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 1 1 ) noop ) )
+LOG 1397435994759 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994759 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994768 [L0]: [Sent at 1397435994768] busy
+LOG 1397435994768 [L0]: [Sent at 1397435994768] busy
+LOG 1397435994775 [L0]: [Received at 1397435994775] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 3 3 ) ) )
+LOG 1397435994776 [L0]: [Received at 1397435994776] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 3 3 ) ) )
+LOG 1397435994781 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994781 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994790 [L0]: [Sent at 1397435994790] busy
+LOG 1397435994790 [L0]: [Sent at 1397435994790] busy
+LOG 1397435994797 [L0]: [Received at 1397435994797] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 1 3 ) noop ) )
+LOG 1397435994797 [L0]: [Received at 1397435994797] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 1 3 ) noop ) )
+LOG 1397435994802 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994802 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994811 [L0]: [Sent at 1397435994811] busy
+LOG 1397435994811 [L0]: [Sent at 1397435994811] busy
+LOG 1397435994817 [L0]: [Received at 1397435994817] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 2 2 ) ) )
+LOG 1397435994817 [L0]: [Received at 1397435994817] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 2 2 ) ) )
+LOG 1397435994823 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994823 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994832 [L0]: [Sent at 1397435994832] busy
+LOG 1397435994832 [L0]: [Sent at 1397435994832] busy
+LOG 1397435994838 [L0]: [Received at 1397435994838] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 3 2 ) noop ) )
+LOG 1397435994838 [L0]: [Received at 1397435994838] ( PLAY kiosk.ticTacToe-1397435994636 (( mark 3 2 ) noop ) )
+LOG 1397435994843 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994844 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994853 [L0]: [Sent at 1397435994853] busy
+LOG 1397435994853 [L0]: [Sent at 1397435994853] busy
+LOG 1397435994859 [L0]: [Received at 1397435994859] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 2 1 ) ) )
+LOG 1397435994859 [L0]: [Received at 1397435994859] ( PLAY kiosk.ticTacToe-1397435994636 (noop ( mark 2 1 ) ) )
+LOG 1397435994865 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994865 [L9]: <ERR> Got play message not intended for current game: ignoring.
+LOG 1397435994874 [L0]: [Sent at 1397435994874] busy
+LOG 1397435994874 [L0]: [Sent at 1397435994874] busy
+LOG 1397435994899 [L0]: [Received at 1397435994899] ( STOP kiosk.ticTacToe-1397435994636 (( mark 1 2 ) noop ) )
+LOG 1397435994900 [L0]: [Received at 1397435994900] ( STOP kiosk.ticTacToe-1397435994636 (( mark 1 2 ) noop ) )
+LOG 1397435994905 [L9]: <ERR> Got stop message not intended for current game: ignoring.
+LOG 1397435994905 [L9]: <ERR> Got stop message not intended for current game: ignoring.
+LOG 1397435994915 [L0]: [Sent at 1397435994915] busy
+LOG 1397435994916 [L0]: [Sent at 1397435994916] busy
