@@ -1,0 +1,153 @@
+LOG 1398035458492 [L0]: [Received at 1398035458492] ( START kiosk.ticTacToe-1398035458304 xplayer (( role xplayer ) ( role oplayer ) ( index 1 ) ( index 2 ) ( index 3 ) ( <= ( base ( cell ?x ?y b ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y x ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y o ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( control ?p ) ) ( role ?p ) ) ( <= ( input ?p ( mark ?x ?y ) ) ( index ?x ) ( index ?y ) ( role ?p ) ) ( <= ( input ?p noop ) ( role ?p ) ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1398035458492 [L0]: [Received at 1398035458492] ( START kiosk.ticTacToe-1398035458304 oplayer (( role xplayer ) ( role oplayer ) ( index 1 ) ( index 2 ) ( index 3 ) ( <= ( base ( cell ?x ?y b ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y x ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( cell ?x ?y o ) ) ( index ?x ) ( index ?y ) ) ( <= ( base ( control ?p ) ) ( role ?p ) ) ( <= ( input ?p ( mark ?x ?y ) ) ( index ?x ) ( index ?y ) ( role ?p ) ) ( <= ( input ?p noop ) ( role ?p ) ) ( init ( cell 1 1 b ) ) ( init ( cell 1 2 b ) ) ( init ( cell 1 3 b ) ) ( init ( cell 2 1 b ) ) ( init ( cell 2 2 b ) ) ( init ( cell 2 3 b ) ) ( init ( cell 3 1 b ) ) ( init ( cell 3 2 b ) ) ( init ( cell 3 3 b ) ) ( init ( control xplayer ) ) ( <= ( next ( cell ?m ?n x ) ) ( does xplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n o ) ) ( does oplayer ( mark ?m ?n ) ) ( true ( cell ?m ?n b ) ) ) ( <= ( next ( cell ?m ?n ?w ) ) ( true ( cell ?m ?n ?w ) ) ( distinct ?w b ) ) ( <= ( next ( cell ?m ?n b ) ) ( does ?w ( mark ?j ?k ) ) ( true ( cell ?m ?n b ) ) ( or ( distinct ?m ?j ) ( distinct ?n ?k ) ) ) ( <= ( next ( control xplayer ) ) ( true ( control oplayer ) ) ) ( <= ( next ( control oplayer ) ) ( true ( control xplayer ) ) ) ( <= ( row ?m ?x ) ( true ( cell ?m 1 ?x ) ) ( true ( cell ?m 2 ?x ) ) ( true ( cell ?m 3 ?x ) ) ) ( <= ( column ?n ?x ) ( true ( cell 1 ?n ?x ) ) ( true ( cell 2 ?n ?x ) ) ( true ( cell 3 ?n ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 1 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 3 ?x ) ) ) ( <= ( diagonal ?x ) ( true ( cell 1 3 ?x ) ) ( true ( cell 2 2 ?x ) ) ( true ( cell 3 1 ?x ) ) ) ( <= ( line ?x ) ( row ?m ?x ) ) ( <= ( line ?x ) ( column ?m ?x ) ) ( <= ( line ?x ) ( diagonal ?x ) ) ( <= open ( true ( cell ?m ?n b ) ) ) ( <= ( legal ?w ( mark ?x ?y ) ) ( true ( cell ?x ?y b ) ) ( true ( control ?w ) ) ) ( <= ( legal xplayer noop ) ( true ( control oplayer ) ) ) ( <= ( legal oplayer noop ) ( true ( control xplayer ) ) ) ( <= ( goal xplayer 100 ) ( line x ) ) ( <= ( goal xplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal xplayer 0 ) ( line o ) ) ( <= ( goal oplayer 100 ) ( line o ) ) ( <= ( goal oplayer 50 ) ( not ( line x ) ) ( not ( line o ) ) ( not open ) ) ( <= ( goal oplayer 0 ) ( line x ) ) ( <= terminal ( line x ) ) ( <= terminal ( line o ) ) ( <= terminal ( not open ) ) ) 30 10)
+LOG 1398035458525 [L0]: [Sent at 1398035458525] ready
+LOG 1398035458550 [L0]: [Sent at 1398035458550] ready
+LOG 1398035458566 [L0]: [Received at 1398035458566] ( PLAY kiosk.ticTacToe-1398035458304 NIL )
+LOG 1398035458566 [L0]: [Received at 1398035458566] ( PLAY kiosk.ticTacToe-1398035458304 NIL )
+LOG 1398035458575 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+LOG 1398035458586 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1398035458595 [L0]: [Sent at 1398035458595] nil
+LOG 1398035462172 [L0]: [Sent at 1398035462172] ( mark 1 1 )
+LOG 1398035462189 [L0]: [Received at 1398035462189] ( PLAY kiosk.ticTacToe-1398035458304 (( mark 1 1 ) noop ) )
+LOG 1398035462189 [L0]: [Received at 1398035462189] ( PLAY kiosk.ticTacToe-1398035458304 (( mark 1 1 ) noop ) )
+LOG 1398035462198 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+LOG 1398035462200 [L0]: [Sent at 1398035462200] noop
+LOG 1398035462208 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1398035462218 [L0]: [Sent at 1398035462218] nil
+LOG 1398035462226 [L0]: [Received at 1398035462226] ( PLAY kiosk.ticTacToe-1398035458304 (noop ( mark 2 3 ) ) )
+LOG 1398035462226 [L0]: [Received at 1398035462226] ( PLAY kiosk.ticTacToe-1398035458304 (noop ( mark 2 3 ) ) )
+LOG 1398035462234 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+LOG 1398035462243 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1398035462253 [L0]: [Sent at 1398035462253] nil
+LOG 1398035468335 [L0]: [Sent at 1398035468335] ( mark 2 1 )
+LOG 1398035468343 [L0]: [Received at 1398035468343] ( PLAY kiosk.ticTacToe-1398035458304 (( mark 2 1 ) noop ) )
+LOG 1398035468343 [L0]: [Received at 1398035468343] ( PLAY kiosk.ticTacToe-1398035458304 (( mark 2 1 ) noop ) )
+LOG 1398035468350 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+LOG 1398035468352 [L0]: [Sent at 1398035468352] noop
+LOG 1398035468361 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1398035468370 [L0]: [Sent at 1398035468370] nil
+LOG 1398035468376 [L0]: [Received at 1398035468376] ( PLAY kiosk.ticTacToe-1398035458304 (noop ( mark 2 2 ) ) )
+LOG 1398035468377 [L0]: [Received at 1398035468377] ( PLAY kiosk.ticTacToe-1398035458304 (noop ( mark 2 2 ) ) )
+LOG 1398035468384 [L9]: <ERR> java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+LOG 1398035468400 [L9]: <ERR> An unhandled exception ocurred during move selection: org.ggp.base.player.gamer.exception.MoveSelectionException: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:215)
+	at org.ggp.base.player.request.grammar.PlayRequest.process(PlayRequest.java:49)
+	at org.ggp.base.player.GamePlayer.run(GamePlayer.java:89)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.ggp.base.util.statemachine.implementation.prover.query.ProverQueryBuilder.getContext(ProverQueryBuilder.java:41)
+	at org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine.getNextState(ProverStateMachine.java:99)
+	at org.ggp.base.util.statemachine.cache.CachedStateMachine.getNextState(CachedStateMachine.java:91)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.bestMove(OurDeliberativeGamer.java:53)
+	at org.ggp.base.player.gamer.statemachine.sample.OurDeliberativeGamer.stateMachineSelectMove(OurDeliberativeGamer.java:33)
+	at org.ggp.base.player.gamer.statemachine.StateMachineGamer.selectMove(StateMachineGamer.java:210)
+	... 2 more
+LOG 1398035468410 [L0]: [Sent at 1398035468410] nil
+LOG 1398035479453 [L0]: [Sent at 1398035479453] ( mark 3 1 )
+LOG 1398035479475 [L0]: [Received at 1398035479475] ( STOP kiosk.ticTacToe-1398035458304 (( mark 3 1 ) noop ) )
+LOG 1398035479476 [L0]: [Received at 1398035479475] ( STOP kiosk.ticTacToe-1398035458304 (( mark 3 1 ) noop ) )
+LOG 1398035479486 [L0]: [Sent at 1398035479486] done
+LOG 1398035479489 [L0]: [Sent at 1398035479489] done

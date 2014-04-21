@@ -40,14 +40,12 @@ import org.ggp.base.util.statemachine.implementation.prover.ProverStateMachine;
  *
  * @author Sam Schreiber
  */
-public final class SampleSearchLightGamer extends StateMachineGamer
-{
+public final class SampleSearchLightGamer extends StateMachineGamer {
 	/**
 	 * Does nothing
 	 */
 	@Override
-	public void stateMachineMetaGame(long timeout) throws TransitionDefinitionException, MoveDefinitionException, GoalDefinitionException
-	{
+	public void stateMachineMetaGame(long timeout) throws TransitionDefinitionException, MoveDefinitionException, GoalDefinitionException {
 		// Do nothing.
 	}
 
@@ -65,8 +63,7 @@ public final class SampleSearchLightGamer extends StateMachineGamer
 	 * </ol>
 	 */
 	@Override
-	public Move stateMachineSelectMove(long timeout) throws TransitionDefinitionException, MoveDefinitionException, GoalDefinitionException
-	{
+	public Move stateMachineSelectMove(long timeout) throws TransitionDefinitionException, MoveDefinitionException, GoalDefinitionException {
 	    StateMachine theMachine = getStateMachine();
 		long start = System.currentTimeMillis();
 		long finishBy = timeout - 1000;
