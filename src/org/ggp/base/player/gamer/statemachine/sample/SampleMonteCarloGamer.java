@@ -23,8 +23,7 @@ import org.ggp.base.util.statemachine.exceptions.TransitionDefinitionException;
  *
  * @author Sam Schreiber
  */
-public final class SampleMonteCarloGamer extends SampleGamer
-{
+public final class SampleMonteCarloGamer extends SampleGamer {
 	/**
 	 * Employs a simple sample "Monte Carlo" algorithm.
 	 */
