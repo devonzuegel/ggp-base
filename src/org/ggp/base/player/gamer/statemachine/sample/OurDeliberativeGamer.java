@@ -20,8 +20,6 @@ import org.ggp.base.util.statemachine.exceptions.TransitionDefinitionException;
  *
  */
 public final class OurDeliberativeGamer extends SampleGamer {
-
-	private int moveNo = 1;
 	/**
 	 * This function is called at the start of each round
 	 * You are required to return the Move your player will play
@@ -31,11 +29,8 @@ public final class OurDeliberativeGamer extends SampleGamer {
 		// We get the current start time
 		long start = System.currentTimeMillis();
 
-		ArrayList<Move> movesToDo = new ArrayList<Move>();
-
 		List<Move> moves = getStateMachine().getLegalMoves(getCurrentState(), getRole());
-		Move selection = bestMove(movesToDo, moves, getCurrentState());
-		moveNo++;
+		Move selection = bestMove(moves, getCurrentState());
 
 		// We get the end time ... It is mandatory that stop<timeout
 		long stop = System.currentTimeMillis();
@@ -47,7 +42,7 @@ public final class OurDeliberativeGamer extends SampleGamer {
 
 	// get the next possible states
 	// return the move to the state that'll give the greatest possible points
-	private Move bestMove(ArrayList<Move> movesToDo, List<Move> moves, MachineState state) throws GoalDefinitionException, MoveDefinitionException, TransitionDefinitionException {
+	private Move bestMove(List<Move> moves, MachineState state) throws GoalDefinitionException, MoveDefinitionException, TransitionDefinitionException {
 		Move bestmove = moves.get(0);
 		int score = 0;
 		for (int i = 0; i < moves.size(); i++) {
