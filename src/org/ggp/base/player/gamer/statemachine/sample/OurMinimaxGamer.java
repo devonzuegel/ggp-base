@@ -45,15 +45,17 @@ public final class OurMinimaxGamer extends SampleGamer {
 	// return the move to the state that'll give the greatest possible points
 	private Move bestMove(List<Move> moves, MachineState state) throws GoalDefinitionException, MoveDefinitionException, TransitionDefinitionException {
 		Move bestmove = moves.get(0);
-//		int score = 0;
-//		for (int i = 0; i < moves.size(); i++) {
-//			Move move = moves.get(i);
-//			int result = minscore(getRole(), move, state);
-//			if (result > score)		{
-//				score = result;
-//				bestmove = move;
-//			}
-//		}
+		int score = 0;
+		System.out.print("Yo\n");
+		for (int i = 0; i < moves.size(); i++) {
+			Move move = moves.get(i);
+			int result = minscore(getRole(), move, state);
+			System.out.print("Result = "+result+"\n");
+			if (result > score)		{
+				score = result;
+				bestmove = move;
+			}
+		}
 		return bestmove;
 	}
 
